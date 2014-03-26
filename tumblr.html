@@ -150,6 +150,14 @@ background-color: #EEEEEE;
 }
 
 
+.post-wrapper{
+    border-radius:none;
+}
+
+.index-page.grid .photoset .post {
+    padding: 15px;
+}
+
 .posRel{
     position:relative;
 } 
@@ -233,25 +241,27 @@ background-color: #EEEEEE;
                                 <!--    <a href="/archive">{lang:Archive}</a>-->
                                 <!--</li>-->
                                 {block:AskEnabled}
-                                    <li>
+                                    <!-- <li>
                                         <a href="/ask" class="ask">{AskLabel}</a>
-                                    </li>
+                                    </li> -->
                                 {/block:AskEnabled}
                                 <div class="le-menu">
         <ul>
             {block:HasPages}
                 {block:Pages}
                 <li>
-                    <a href="{URL}" class="page arrow">{Label}</a>
+                    <a href="{URL}" class="page"><i class="fa fa-file-text-o"></i><span class="text-menu">{Label}</span></a>
                 </li>
                 {/block:Pages}
             {/block:HasPages}
         
-            <li>Portfilio</li>
-            <li><a href="http://www.pieplu.co/tagged/edition">Édition</a></li>
-            <li><a href="http://www.pieplu.co/tagged/publicite">Publicité</a></li>
+            <li><a href="http://www.pieplu.co/tagged/portfolio"><i class="fa fa-archive"></i> Portfolio</a></li>
+            <li><a href="http://github.com/Pieplu"><i class="fa fa-github-alt"></i> GitHub</a></li>
+            <li><a href="mailto:bonjour@pieplu.co?Subject=Bonjour%20Alexis%20Piéplu%20!"><i class="fa fa-comment-o"></i> Contact</a></li>
+
+            
         </ul>
-        <a href="mailto:bonjour@pieplu.co">Dites-moi bonjour !</a>
+        
     </div>
                                 {block:SubmissionsEnabled}
                                     <li>
