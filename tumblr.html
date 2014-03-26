@@ -151,11 +151,14 @@ background-color: #EEEEEE;
 
 
 .post-wrapper{
-    border-radius:none;
+    border-radius:0px;
 }
-
 .index-page.grid .photoset .post {
     padding: 15px;
+}
+
+.photoset .photoset_row{
+    margin-top:15px;
 }
 
 .posRel{
@@ -321,7 +324,11 @@ background-color: #EEEEEE;
 
                                         {block:Photoset}
                                         <figure class="photoset {block:Caption}with-caption{/block:Caption}">
-                                            {Photoset}
+                                            {block:Photos}
+            <img src="{PhotoURL-HighRes}" class="highres">
+        {/block:Photos}
+
+                                            
                                             {block:Caption}
                                             <figcaption class="caption">
                                                 {Caption}
